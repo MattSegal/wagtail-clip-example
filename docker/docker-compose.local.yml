@@ -1,0 +1,35 @@
+version: "3"
+
+services:
+  # Local development database.
+  database:
+    container_name: database
+    image: postgres
+    environment:
+      POSTGRES_HOST_AUTH_METHOD: "trust"
+    volumes:
+      - demo-postgres-data:/var/lib/postgresql/data
+    ports:
+      - 25432:5432
+
+  # Django webserver.
+  web:
+    container_name: web
+    command: python3 ./manage.py runserver 0.0.0.0:8000
+    image: wagtail-clip:local
+    ports:
+      - 8000:8000
+    volumes:
+      - ../app:/app
+    links:
+      - database
+    environment:
+      PGDATABASE: postgres
+      PGUSER: postgres
+      PGPASSWORD: password
+      PGHOST: database
+      PGPORT: 5432
+      DJANGO_SETTINGS_MODULE: demo.settings.dev
+
+volumes:
+  demo-postgres-data:

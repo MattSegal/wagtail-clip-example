@@ -1,0 +1,14 @@
+# General
+*.log
+.DS_Store
+.idea/
+.vscode/
+*.pyc
+*pytest_cache*
+.env
+*.secret.*
+env/
+
+# Example project
+media/
+clip/

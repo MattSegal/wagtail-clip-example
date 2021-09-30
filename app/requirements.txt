@@ -1,0 +1,25 @@
+# Backend
+django
+wagtail
+
+# Infrastructure
+psycopg2-binary
+
+# Static files
+whitenoise
+
+# Admin
+django-extensions
+ipython
+
+# Linting
+black
+
+# Downloading stuff
+requests
+
+# CLIP image search
+-f https://download.pytorch.org/whl/torch_stable.html
+torch==1.7.1+cpu
+torchvision==0.8.2+cpu
+wagtailclip@git+https://github.com/MattSegal/wagtail-clip.git
