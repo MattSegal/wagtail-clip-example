@@ -1,6 +1,6 @@
 # Wagtail CLIP example project
 
-A project that shows you how you can use [wagtail-clip](https://github.com/MattSegal/wagtail-clip).
+A project that shows you how you can use [Wagtail CLIP](https://github.com/MattSegal/wagtail-clip).
 
 ## Setup
 
